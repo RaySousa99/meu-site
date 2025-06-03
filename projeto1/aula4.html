@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4 - Tabelas e Layout com div</title>
+    <style>
+        #menu {
+            background: #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha Loja</h1>
+
+    <!-- Tabela -->
+    <table border="1">
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>R$ 49,90</td>
+        </tr>
+        <tr>
+            <td>Teclado</td>
+            <td>R$ 79,90</td>
+        </tr>
+        <tr>
+            <td colspan="2">Total: R$ 129,80</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Estrutura com div -->
+     <div id="topo">Topo do site</div>
+     <div id="menu">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+     </div>
+     <div id="conteudo">
+        <p>Bem-vindo à nossa loja virtual!</p>
+     </div>
+     <div id="rodape">Rodapé</div>
+</body>
+</html>
