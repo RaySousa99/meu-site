@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12 - JavaScript Intermediário</title>
+    <link rel="stylesheet" href="css/estilo7.css">
+</head>
+<body>
+    <form id="formContato">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <p id="resposta"></p>
+
+    <script>
+        const form = document.getElementById("formContato");
+        const resposta = document.getElementById("resposta");    
+        
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede envio padrão
+
+            // Coletar valores
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            // Validação simples 
+            if (nome.length < 3) {
+                resposta.innerText = "Nome precisa ter pelo menos 3 letras.";
+                return;
+            }
+
+            if (!email.includes("@")) {
+                resposta.innerText = "E-mail inválido.";
+                return;
+            }
+
+            if (mensagem.length < 10) {
+                resposta.innerText = "Mensagem muito curta.";
+                return;
+            }
+
+            resposta.innerText = "Mensagem enviada com sucesso!";
+        });
+    </script>
+
+</body>
+</html>
