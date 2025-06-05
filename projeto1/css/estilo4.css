@@ -33,7 +33,7 @@ main {grid-area: main;}
 aside {grid-area: aside;}
 footer {grid-area: footer;}
 
-@media (max-widht: 768px) {
+@media (max-width: 768px) {
     body {
         grid-template-areas: 
             "header"
