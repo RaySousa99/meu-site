@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Formuçário HTML5</title>
+    <link rel="stylesheet" href="css/estilo6.css">
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+        <label for="assunto">Assunto:</label>
+        <select name="assunto" id="assunto" required>
+            <option value="contato">Contato</option>
+            <option value="orcamento">Orçamento</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+</body>
+</html>
